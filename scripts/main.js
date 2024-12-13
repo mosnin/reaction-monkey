@@ -35,17 +35,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('instructions-btn').addEventListener('click', showInstructions);
     document.getElementById('settings-btn').addEventListener('click', showSettings);
     document.getElementById('leaderboard-btn').addEventListener('click', showLeaderboard);
+    
+    // Instructions buttons
     document.getElementById('instructions-start-btn').addEventListener('click', () => {
         hideAllContainers();
         document.getElementById('menu-container').style.display = 'flex';
     });
     document.getElementById('instructions-back-btn').addEventListener('click', showStartScreen);
-    document.getElementById('settings-back-btn').addEventListener('click', showStartScreen);
+    
+    // Menu buttons
+    document.getElementById('menu-start-btn').addEventListener('click', startGame);
+    document.getElementById('menu-back-btn').addEventListener('click', showStartScreen);
+    
+    // Settings buttons
+    document.getElementById('sound-settings-back-btn').addEventListener('click', showStartScreen);
+    
+    // Leaderboard button
     document.getElementById('leaderboard-back-btn').addEventListener('click', showStartScreen);
-    document.getElementById('back-btn').addEventListener('click', showStartScreen);
-    document.getElementById('start-game-btn').addEventListener('click', startGame);
+    
+    // Game over buttons
     document.getElementById('retry-btn').addEventListener('click', startGame);
     document.getElementById('home-btn').addEventListener('click', showStartScreen);
+    
+    // Sound toggle
     document.getElementById('sound-toggle').addEventListener('click', toggleSound);
     
     initializeSettings();
