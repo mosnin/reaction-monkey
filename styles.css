@@ -82,15 +82,8 @@ body {
 .settings-group {
     width: 100%;
     max-width: 600px;
-    margin: 20px 0;
+    margin: 20px auto;
     padding: var(--container-padding);
-}
-
-.settings-group h3 {
-    color: var(--primary-glow);
-    text-shadow: 0 0 5px var(--primary-glow);
-    font-size: 1.5em;
-    margin: 0 0 20px 0;
     text-align: center;
 }
 
@@ -99,7 +92,9 @@ body {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin: 10px 0;
+    margin: 15px 0;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .setting-btn {
@@ -112,6 +107,8 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     min-width: 120px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .setting-btn:hover {
@@ -123,6 +120,37 @@ body {
     background-color: var(--primary-glow);
     color: #000;
     box-shadow: 0 0 15px var(--primary-glow);
+}
+
+@media (max-width: 768px) {
+    .settings-group {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .button-group {
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .setting-btn {
+        min-width: 100px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-group {
+        gap: 8px;
+        padding: 0 5px;
+    }
+
+    .setting-btn {
+        min-width: 90px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
 }
 
 /* Game grid */
